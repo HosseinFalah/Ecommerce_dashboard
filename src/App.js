@@ -4,10 +4,13 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './Components'
 import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './Pages'
+import { useStateContext } from './Context/ContextProvider';
 import './App.css';
 
 const App = () => {
-    const activeMenu = true
+    
+    const { activeMenu } = useStateContext()
+
     return (
         <div>
             <BrowserRouter>
@@ -28,7 +31,7 @@ const App = () => {
                             <Sidebar/>
                         </div>
                     )}
-                    <div className={`dark:bg-slate-50 bg-white min-h-screen w-full ${activeMenu ? "md:ml-72" : "flex-[2_2_0%]"}`}>
+                    <div className={`dark:bg-slate-100 bg-slate-100 min-h-screen w-full ${activeMenu ? "md:ml-72" : "flex-[2_2_0%]"}`}>
                         <div className="fixed md:static bg-slate-100 dark:bg-zinc-800 navbar w-full">
                             <Navbar/>
                         </div>
