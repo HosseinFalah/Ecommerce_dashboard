@@ -35,34 +35,34 @@ const App = () => {
                         <div className="fixed md:static bg-slate-100 dark:bg-zinc-800 navbar w-full">
                             <Navbar/>
                         </div>
-                    </div>
-                    <div>
-                        <Routes>
-                            {/* Dashboard */}
-                            <Route path="/" element={<Ecommerce/>}/>
-                            <Route path="/ecommerce" element={<Ecommerce/>}/>
+                        <div>
+                            <Routes>
+                                {/* Dashboard */}
+                                <Route path="/" element={<Ecommerce/>}/>
+                                <Route path="/ecommerce" element={<Ecommerce/>}/>
 
-                            {/* Paegs */}
-                            <Route path="/orders" element={<Orders/>}/>
-                            <Route path="/employees" element={<Employees/>}/>
-                            <Route path="/customers" element={<Customers/>}/>
+                                {/* Paegs */}
+                                <Route path="/orders" element={<Orders/>}/>
+                                <Route path="/employees" element={<Employees/>}/>
+                                <Route path="/customers" element={<Customers/>}/>
 
-                            {/* Apps */}
-                            <Route path="/kanban" element={<Kanban/>}/>
-                            <Route path="/editor" element={<Editor/>}/>
-                            <Route path="/calendar" element={<Calendar/>}/>
-                            <Route path="/color-picker" element={<ColorPicker/>}/>
+                                {/* Apps */}
+                                <Route path="/kanban" element={<Kanban/>}/>
+                                <Route path="/editor" element={<Editor/>}/>
+                                <Route path="/calendar" element={<Calendar/>}/>
+                                <Route path="/color-picker" element={<ColorPicker/>}/>
 
-                            {/* Charts */}
-                            <Route path="/line" element={<Line/>}/>
-                            <Route path="/area" element={<Area/>}/>
-                            <Route path="/bar" element={<Bar/>}/>
-                            <Route path="/pie" element={<Pie/>}/>
-                            <Route path="/finacial" element={<Financial/>}/>
-                            <Route path="/color-mapping" element={<ColorMapping/>}/>
-                            <Route path="/pyramid" element={<Pyramid/>}/>
-                            <Route path="/stacked" element={<Stacked/>}/>
-                        </Routes>
+                                {/* Charts */}
+                                <Route path="/line" element={<Line/>}/>
+                                <Route path="/area" element={<Area/>}/>
+                                <Route path="/bar" element={<Bar/>}/>
+                                <Route path="/pie" element={<Pie/>}/>
+                                <Route path="/finacial" element={<Financial/>}/>
+                                <Route path="/color-mapping" element={<ColorMapping/>}/>
+                                <Route path="/pyramid" element={<Pyramid/>}/>
+                                <Route path="/stacked" element={<Stacked/>}/>
+                            </Routes>
+                        </div>
                     </div>
                 </div>
             </BrowserRouter>
