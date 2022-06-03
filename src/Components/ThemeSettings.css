@@ -1,0 +1,4 @@
+.bg-neutral-800 {
+    --tw-bg-opacity: 0.7 !important;
+    background-color: rgb(38 38 38 / var(--tw-bg-opacity)) !important;
+}
