@@ -9,15 +9,15 @@ import './App.css';
 
 const App = () => {
     
-    const { activeMenu, themeSettings, setThemeSettings } = useStateContext()
+    const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext()
 
     return (
-        <div>
+        <div className={currentMode === "Dark" ? "dark" : ""}>
             <BrowserRouter>
                 <div className="flex relative dark:bg-zinc-700">
                     <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
                         <TooltipComponent content="Settings" position="Top">
-                            <button type="button" onClick={() => setThemeSettings(true)} className="text-3xl p-3 hover:drop-shadow-xl hover:bg-lime-50 text-white" style={{background: "blue", borderRadius: "50%"}}>
+                            <button type="button" onClick={() => setThemeSettings(true)} className="text-3xl p-3 hover:drop-shadow-xl hover:bg-lime-50 text-white" style={{background: currentColor, borderRadius: "50%"}}>
                                 <FiSettings/>
                             </button>
                         </TooltipComponent>
