@@ -13,7 +13,7 @@ const Stacked = ({width, height, currentMode}) => {
       primaryYAxis={stackedPrimaryYAxis} 
       chartArea={{border: { width: 0 }}} 
       tooltip={{ enable: true }}
-      background={currentMode === "Dark" ? "#33373E" : "#fff"}
+      background={currentMode === "Dark" ? "#3F3F46" : "#fff"}
       legendSettings={{background: "white"}}
       >
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]}/>
