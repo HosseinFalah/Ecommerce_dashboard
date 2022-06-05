@@ -35,7 +35,7 @@ const App = () => {
                         <div className="fixed md:static bg-slate-100 dark:bg-zinc-800 navbar w-full">
                             <Navbar/>
                         </div>
-                        <div>
+                        <>
                             {themeSettings && <ThemeSettings/>}
                             <Routes>
                                 {/* Dashboard */}
@@ -63,7 +63,7 @@ const App = () => {
                                 <Route path="/pyramid" element={<Pyramid/>}/>
                                 <Route path="/stacked" element={<Stacked/>}/>
                             </Routes>
-                        </div>
+                        </>
                     </div>
                 </div>
             </BrowserRouter>
