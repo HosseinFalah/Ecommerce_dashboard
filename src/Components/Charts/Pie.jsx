@@ -11,7 +11,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
       id={id}
       legendSettings={{ visible: legendVisiblity, background: 'white'}}
       height={height}
-      background={currentMode === 'Dark' ? '#3F3F46' : '#fff'}
+      background={currentMode === 'Dark' ? '#33373E' : '#fff'}
       tooltip={{ enable: true }}
     >
       <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />
