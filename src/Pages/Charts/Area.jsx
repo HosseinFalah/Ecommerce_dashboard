@@ -7,7 +7,7 @@ import { useStateContext } from '../../Context/ContextProvider';
 const Area = () => {
   const { currentMode } = useStateContext()
   return (
-    <div className="pt-12 dark:bg-zinc-800 h-screen">
+    <div className="pt-12 dark:bg-zinc-800 h-full">
       <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-zinc-700 rounded-3xl">
         <Header category="Area" title="Inflation Rate in Percentage"/>
         <ChartComponent 
