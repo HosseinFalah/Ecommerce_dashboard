@@ -3,11 +3,11 @@ import { v4 as uuidv4 } from 'uuid'
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, StackingColumnSeries, Tooltip } from '@syncfusion/ej2-react-charts'
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../../data/dummy';
 
-const Stacked = ({width, heigth, currentMode}) => {
+const Stacked = ({width, height, currentMode}) => {
   return (
     <ChartComponent 
       width={width} 
-      height={heigth} 
+      height={height} 
       id="charts" 
       primaryXAxis={stackedPrimaryXAxis} 
       primaryYAxis={stackedPrimaryYAxis} 

@@ -21,7 +21,7 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+// import product8 from './product8.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -646,7 +646,7 @@ export const earningData = [
     icon: <HiOutlineRefresh />,
     amount: '39,354',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Refungreends',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -661,7 +661,7 @@ export const recentTransactions = [
     desc: 'Money Added',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
-    pcColor: 'green-600',
+    pcColor: '-600',
   },
   {
     icon: <BsShield />,
