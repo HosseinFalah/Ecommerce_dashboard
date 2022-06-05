@@ -1,12 +1,19 @@
 import React from 'react';
-import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { Stacked, Pie, Button, SparkLine } from '../Components';
-import { earningData, SparklineAreaData } from '../data/dummy';
+import { Stacked, Button, SparkLine, Pie } from '../Components';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { earningData, ecomPieChartData, SparklineAreaData } from '../data/dummy';
 import { useStateContext } from '../Context/ContextProvider';
+import { dropdownData } from "../data/dummy";
+
+const DropDown = ({ currentMode }) => (
+  <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
+    <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
+  </div>
+);
 
 const Ecommerce = () => {
-  const { currentColor } = useStateContext()
+  const { currentColor, currentMode } = useStateContext()
   return (
     <div className="pt-12 dark:bg-zinc-800">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -35,7 +42,7 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-zinc-700 m-3 p-4 rounded-2xl md:w-780">
+        <div className="bg-white dark:text-gray-200 dark:bg-[#33373E] m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
@@ -85,7 +92,37 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked width="320px" height="360px" />
+              <Stacked  currentMode={currentMode} width="320px" height="360px" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            className=" rounded-2xl md:w-400 p-4 m-3"
+            style={{ backgroundColor: currentColor }}
+          >
+            <div className="flex justify-between items-center ">
+              <p className="font-semibold text-white text-2xl">Earnings</p>
+
+              <div>
+                <p className="text-2xl text-white font-semibold mt-8">$63,448.78</p>
+                <p className="text-gray-200">Monthly revenue</p>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
+            </div>
+          </div>
+
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+            <div>
+              <p className="text-2xl font-semibold ">$43,246</p>
+              <p className="text-gray-400">Yearly sales</p>
+            </div>
+
+            <div className="w-40">
+              <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter ,Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, ThemeSettings } from './Components'
+import { Navbar, Sidebar, ThemeSettings } from './Components'
 import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './Pages'
 import { useStateContext } from './Context/ContextProvider';
 import './App.css';
@@ -23,7 +23,7 @@ const App = () => {
                         </TooltipComponent>
                     </div>
                     {activeMenu ? (
-                        <div className="w-72 fixed sidebar dark:bg-zinc-700 bg-white">
+                        <div className="w-72 fixed sidebar dark:bg-[#33373E] bg-white">
                             <Sidebar/>
                         </div>
                     ) : (

@@ -24,7 +24,7 @@ const Sidebar = () => {
               <SiShopware/> <span>Shoppy</span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
-              <button type="button" onClick={() => setActiveMenu(!true)} className="text-xl rounded-full p-3 hover:bg-slate-100 mt-4 md:block sm:hidden text-black">
+              <button type="button" onClick={() => setActiveMenu(!true)} className="text-xl rounded-full p-3 hover:dark:bg-slate-200 mt-4 md:block sm:hidden hover:dark:text-black dark:text-white hover:bg-slate-100">
                 <MdOutlineCancel/>
               </button>
             </TooltipComponent>
